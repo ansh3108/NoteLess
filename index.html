@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteLess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Study Smarter</h1>
+        <p>A student made guide to studying effectively.</p>
+        <nav>
+            <a href="index.html">Techniques</a>
+            <a href="mistakes.html">Common mistakes</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>Study Techniques that actually work</h2>
+            <div class ="card" onclick="showTechnique('active')">
+                Active Recall
+            </div>
+
+            <div class="card" onclick="showTechnique('teaching')">
+                Teaching Others
+            </div>
+
+            <div class="card" onclick="showTechnique('spaced')">
+                Spaced Revision
+            </div>
+
+            <p id="techniqueOutput" class="output">
+                Click a technique to learn more.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Focus Mode</h2>
+            <button onclick="changeBackground()">Toggle Focus Theme</button>
+        </section>
+
+        <section>
+            <h2>Today's Study Goal</h2>
+
+            <input type="text" id="goalInput" placeholder="Enter your Goal" />
+            <button onclick="setGoal()">Set Goal</button>
+            <p id="goalOutput" class="output"></p>
+        </section>
+
+        <section>
+            <h2>My study Environment</h2>
+
+            <img
+                src="setup1.jpg"
+                alt="Study desk setup"
+                class="study-image"
+                onclick="highlightImage()"
+            />
+            <p class="caption">
+                A clean and organized desk helps reduce distractions and improves focus.
+            </p>
+        </section>
+
+        <section>
+            <h2>Quick Notes</h2>
+
+            <textarea
+                id="notesInput"
+                placeholder="Type your notes here...."
+                onkeyup="previewNotes()"
+            ></textarea>
+
+            <div class="notes-preview">
+                <h4>Live Preview:</h4>
+                <p id="notesOutput"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    <p>Made with 💖 by a <a href="https://github.com/ansh3108">student</a>, for students and <a href="https://github.com/ansh3108">open source!</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common mistakes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Common study Mistakes</h1>
+        <p>Things students do that hurt performances</p>
+    <nav>
+        <a href="index.html">Techniques</a>
+        <a href="mistakes.html">Common Mistakes</a>
+    </nav>
+    </header>
+
+    <main class="container">
+        <section>
+            <div class="card" onclick="revealMistake('cramming')">
+                Cramming
+            </div>
+
+            <div class="card" onclick="revealMistake('passive')">
+                Passive Reading
+            </div>
+
+            <div class="card" onclick="revealMistake('multitasking')">
+                Multitasking
+            </div>
+            
+            <p id="mistakeOutput" class="output">
+                Click a mistake to see why it is harmful.
+            </p>
+        </section>
+
+        <section>
+            <button onclick="countMistakes()">I do this mistake</button>
+            <button onclick="resetView()">Reset</button>
+
+            <p id="mistakeCount" class="output"></p>
+        </section>
+
+        <section>
+            <h2>How Serious is this Mistake?</h2>
+            
+            <select id="severity" onchange="checkSeverity()">
+                <option value="">Select severity</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <p id="severityOutput" class="output"></p>
+        </section>
+
+        <section>
+            <h2>Quick Tips</h2>
+            <p id="hiddenTip" class="hidden">
+                Press the <strong>H</strong> key to reveal a hidden study tip.
+            </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
